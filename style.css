@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    background-color: aqua;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(0, 255, 98);
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 800px;
+    /* height: 100vh; */
+}
+
+.carrossel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 40s infinite forwards;
+    height: 100vh;
+}
+
+.imagem {
+    position: absolute;
+    top: 404px;
+    left: 10px;
+    right: 10px;
+    width: 290px;
+    height: 187px;
+    background-size: cover;
+    display: flex;
+}
+
+.imagem span {
+    font-size: 1.2em;
+    margin: auto;
+    text-align: center;
+}
+
+@keyframes rotate360 {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-311deg);
+    }
+}
+
+.imagem:nth-child(1){
+    background-image: url(https://www.comboinfinito.com.br/principal/wp-content/uploads/2016/06/kratos-novo-god-of-war.jpg);
+    transform: rotateY(0deg) translateZ(430px);
+    border-radius: 200px;
+}
+.imagem:nth-child(2){
+    background-image: url(https://static.gamevicio.com/imagens_up/big/77/agora-e-possivel-jogar-god-of-war-no-xbox-076281.jpg);
+    transform: rotateY(90deg) translateZ(430px);
+    border-radius: 200px;
+}
+.imagem:nth-child(3){
+    background-image: url(https://noctuam.files.wordpress.com/2018/05/kratos-madruga.jpg);
+    transform: rotateY(180deg) translateZ(430px);
+    border-radius: 200px;
+}
+.imagem:nth-child(4){
+    background-image: url(https://uploads.jovemnerd.com.br/wp-content/uploads/2019/06/kratos-quase-foi-cortado-do-god-of-war-mais-recente.jpg);
+    transform: rotateY(270deg) translateZ(430px);
+    border-radius: 200px;
+}
+.imagem:nth-child(5){
+    background-image: url(https://sm.ign.com/ign_br/screenshot/default/blob_wyqx.jpg);
+    transform: rotateY(360deg) translateZ(430px);
+    border-radius: 200px;
+}
